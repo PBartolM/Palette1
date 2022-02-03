@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".Act2">
+
+
+    <ImageView
+        android:id="@+id/imageViewColore"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        app:srcCompat="@drawable/image1" />
+
+
+        <TextView
+            android:id="@+id/vibrant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vibrant" />
+
+
+        <TextView
+            android:id="@+id/lightVibrant"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:text="Light Vibrant" />
+
+        <TextView
+            android:id="@+id/darkVibrant"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:text="Dark Vibrant" />
+
+        <TextView
+            android:id="@+id/muted"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Muted" />
+
+
+        <TextView
+            android:id="@+id/lightMuted"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:text="Light Muted" />
+
+        <TextView
+            android:id="@+id/darkMuted"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:text="Dark Muted" />
+
+
+
+
+</LinearLayout>
