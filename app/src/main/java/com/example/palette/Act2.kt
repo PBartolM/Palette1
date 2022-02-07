@@ -10,7 +10,9 @@ import android.graphics.BitmapFactory
 
 import android.graphics.Bitmap
 import android.view.View
+import androidx.appcompat.app.ActionBar
 import androidx.palette.graphics.Palette
+import kotlinx.android.synthetic.main.activity_act2.*
 
 
 class Act2 : AppCompatActivity() {
@@ -24,19 +26,48 @@ class Act2 : AppCompatActivity() {
         image.setImageResource(resId)
 
 
+
+        image.setImageResource(bundle!!.getInt("LOGO"))
+
         val bitmap:Bitmap = BitmapFactory.decodeResource(resources,resId)
 
         Palette.from(bitmap).generate { palette ->
 
-            val vibrant: Palette.Swatch? = palette?.vibrantSwatch
-            val darkvibrant: Palette.Swatch? = palette?.darkVibrantSwatch
-            val lightvibrant: Palette.Swatch? = palette?.lightVibrantSwatch
-            val muted: Palette.Swatch? = palette?.mutedSwatch
-            val darkmuted: Palette.Swatch? = palette?.darkMutedSwatch
-            val lightmuted: Palette.Swatch? = palette?.lightMutedSwatch
+            val vibrante: Palette.Swatch? = palette?.vibrantSwatch
+            val darkvibrante: Palette.Swatch? = palette?.darkVibrantSwatch
+            val lightvibrante: Palette.Swatch? = palette?.lightVibrantSwatch
+            val mutede: Palette.Swatch? = palette?.mutedSwatch
+            val darkmutede: Palette.Swatch? = palette?.darkMutedSwatch
+            val lightmutede: Palette.Swatch? = palette?.lightMutedSwatch
+            if (vibrante != null) {
+                vibrant.setBackgroundColor(vibrante.rgb)
+//                vibrant.setTitleTextColor(vibrante.titleTextColor)
+            }
 
+            if (darkvibrante != null) {
+                darkVibrant.setBackgroundColor(darkvibrante.rgb)
+//                darkVibrant.setTitleTextColor(darkvibrante.titleTextColor)
+            }
+            if (lightvibrante != null) {
+                lightVibrant.setBackgroundColor(lightvibrante.rgb)
+//                lightVibrant.setTitleTextColor(lightvibrante.titleTextColor)
+            }
+            if (mutede != null) {
+                muted.setBackgroundColor(mutede.rgb)
+//                muted.setTitleTextColor(mutede.titleTextColor)
+            }
+            if (darkmutede != null) {
+                darkMuted.setBackgroundColor(darkmutede.rgb)
+//                darkMuted.setTitleTextColor(darkmutede.titleTextColor)
+            }
+            if (lightmutede != null) {
+                lightMuted.setBackgroundColor(lightmutede.rgb)
+//                lightMuted.setTitleTextColor(lightmutede.titleTextColor)
+            }
         }
 
 
+
     }
+
 }
